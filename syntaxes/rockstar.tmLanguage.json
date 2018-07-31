@@ -1,0 +1,88 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Rockstar",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#punctuation"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.rockstar",
+				"match": "\\b(While|Until|Give back)\\b"
+			}, {
+				"name": "keyword.control.conditional.rockstar",
+				"match": "\\b(If|Else)\\b"
+			}, {
+				"name": "keyword.operator.arithmetic.rockstar",
+				"match": "\\b(Knock|down|Build|up|plus|with|minus|without|times|of|over|by)\\b"
+			}, {
+				"name": "keyword.operator.assignment.rockstar",
+				"match": "\\b(Put|into|takes|taking)\\b"
+			}, {
+				"name": "keyword.other.rockstar",
+				"match": "\\b(is( not)?|ain't|was|were)\\b"
+			}, {
+				"name": "keyword.other.rockstar",
+				"match": "\\b(Say|Shout|Whisper|Scream|Listen( to)?)\\b"
+			}, {
+				"name": "keyword.other.rockstar",
+				"match": "\\b((higher|greater|bigger|stronger|lower|less|smaller|weaker) than|as (high|great|big|strong|low|little|small|weak) as)\\b"
+			}]
+		},
+		"constants": {
+			"patterns": [{
+				"name": "constant.language.rockstar",
+				"match": "\\b(true|false|right|yes|ok|wrong|no|lies|nothing|nowhere|nobody|null)\\b"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "variable.other.rockstar",
+				"match": "\\b((a|an|the|my|your|A|An|The|My|Your) [a-z]+)\\b"
+			}, {
+				"name": "variable.parameter.rockstar",
+				"match": "\\b(takes ((a|an|the|my|your|A|An|The|My|Your) [a-z]+)( and ((a|an|the|my|your|A|An|The|My|Your) [a-z]+))?)\\b"
+			}]
+		},
+		"punctuation": {
+			"patterns": [{
+				"name": "punctuation.separator.rockstar",
+				"match": "\\b(and)\\b"
+			}]	
+		},
+		"strings": {
+			"name": "string.quoted.double.rockstar",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.rockstar",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.rockstar",
+			"begin": "\\(",
+			"end": "\\)"
+		}
+	},
+	"scopeName": "source.rockstar"
+}

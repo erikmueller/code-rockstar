@@ -1,0 +1,26 @@
+{
+    "name": "rockstar-syntax",
+    "displayName": "rockstar-syntax",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "erikmueller",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "rockstar",
+            "aliases": ["Rockstar", "rockstar"],
+            "extensions": [".rock"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "rockstar",
+            "scopeName": "source.rockstar",
+            "path": "./syntaxes/rockstar.tmLanguage.json"
+        }]
+    }
+}
